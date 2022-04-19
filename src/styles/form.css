@@ -19,6 +19,7 @@ form {
   font-size: 20px;
 }
 .myButton {
+  /* the test color is set in index.css */
   background-color: var(--test-color);
   color: white;
   padding: 4px 0;
