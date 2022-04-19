@@ -17,5 +17,17 @@ header {
 }
 .App h2 {
   font-size: 30px;
-  text-decoration: underline;
+}
+nav {
+  border-bottom: solid 1px white;
+  padding-bottom: 1rem;
+}
+.backLinkH2,
+.backLink {
+  text-align: center;
+  margin-top: 55px;
+}
+.backLink a {
+  font-size: 30px;
+  color: greenyellow;
 }
