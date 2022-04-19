@@ -46,33 +46,45 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="border">
         <h1>This is our CA 2 project</h1>
       </header>
-      <h2>Log in</h2>
-      <form onSubmit={onSubmit}>
-        <div className="form-control">
-          <label>User name</label>
-          <input
-            className="formInput"
-            type="text"
-            placeholder="User name"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          ></input>
-        </div>
-        <div className="form-control">
-          <label>Password</label>
-          <input
-            className="formInput"
-            type="text"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-        </div>
-        <input type="submit" value="Log in" className="myButton" />
-      </form>
+      {/* <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/showHide">Show hide</Link>|
+        <Link to="/objectFetchC">Fetch object create</Link>|
+      </nav>
+      <Outlet /> */}
+      <div className="borderNoTop">
+        <h2>Log in</h2>
+        <form onSubmit={onSubmit}>
+          <div className="form-control">
+            <label>User name</label>
+            <input
+              className="formInput"
+              type="text"
+              placeholder="User name"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+            ></input>
+          </div>
+          <div className="form-control">
+            <label>Password</label>
+            <input
+              className="formInput"
+              type="text"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+          </div>
+          <input type="submit" value="Log in" className="myButton" />
+        </form>
+      </div>
     </div>
   );
 }

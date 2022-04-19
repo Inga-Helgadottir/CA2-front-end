@@ -30,3 +30,12 @@ form input {
 .formInput {
   padding: 4px 10px;
 }
+.border {
+  border: solid 2px white;
+}
+.borderNoTop {
+  border-right: solid 2px white;
+  border-left: solid 2px white;
+  border-bottom: solid 2px white;
+  padding: 5px 0 25px 0;
+}

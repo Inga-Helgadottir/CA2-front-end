@@ -15,10 +15,6 @@ header {
   padding: 10px 0;
   color: black;
 }
-.App {
-  border-bottom: solid 2px white;
-  padding-bottom: 30px;
-}
 .App h2 {
   font-size: 30px;
   text-decoration: underline;
