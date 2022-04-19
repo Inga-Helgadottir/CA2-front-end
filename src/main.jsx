@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <main style={{ padding: "1rem" }}>
             <h1 className="backLinkH2">There's nothing here!</h1>
             <p className="backLink">
-              <a href="http://localhost:3000">To go back click here!</a>
+              <a href="/">To go back click here!</a>
             </p>
           </main>
         }
