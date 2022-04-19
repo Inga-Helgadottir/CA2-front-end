@@ -81,7 +81,7 @@ function App() {
             <label>Password</label>
             <input
               className="formInput"
-              type="text"
+              type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
