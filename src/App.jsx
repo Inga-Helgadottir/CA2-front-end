@@ -8,7 +8,7 @@ import { Outlet, Link } from "react-router-dom";
 
 function App() {
   const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [userRole, setUserRole] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
   /*
@@ -28,8 +28,9 @@ function App() {
 
     const data = await res.json();
     console.log(data);
-    // get username from the data
+    // get username and role from the data
     // setUserName(data.userName);
+    // setUserRole(data.role);
     setLoggedIn(true);
   };
 
@@ -50,6 +51,11 @@ function App() {
       <Outlet />
       */}
       {!loggedIn && <LogIn onAdd={logInFunc} />}
+      {loggedIn && (
+        <h2>
+          Hello {userName}, you are an {userRole} on this site
+        </h2>
+      )}
       <Footer />
     </div>
   );
