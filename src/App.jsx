@@ -9,18 +9,21 @@ function App() {
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const logIn = async (task) => {
-    const res = await fetch(`http://localhost:5000/tasks`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(task),
-    });
+  const logIn = async (user) => {
+    const res = await fetch(
+      `http://localhost:8080/dat3_startcode_security_war_exploded/api/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
 
     const data = await res.json();
-
-    setUserName(userName);
+    console.log(data);
+    setUserName(data);
   };
 
   const onSubmit = (e) => {
@@ -34,7 +37,7 @@ function App() {
       return;
     }
 
-    onAdd({ userName, password });
+    logIn({ userName, password });
 
     setUserName("");
     setPassword("");
