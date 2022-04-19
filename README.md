@@ -1,5 +1,5 @@
 # How to use this code
-open the project
+open the project in its root
 
 write in the terminal:
 
