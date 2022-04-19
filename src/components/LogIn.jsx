@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const LogIn = ({ logInFunc }) => {
+const LogIn = ({ onAdd }) => {
   /*
   THIS CODE DOES NOT WORK YET 
   */
@@ -19,7 +19,7 @@ const LogIn = ({ logInFunc }) => {
       return;
     }
 
-    logInFunc({ userName, password });
+    onAdd({ userName, password });
 
     setUserName("");
     setPassword("");

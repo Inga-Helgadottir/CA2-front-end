@@ -7,8 +7,13 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function App() {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
+  /*
+  logInFunc DOES NOT WORK YET 
+  */
   const logInFunc = async (user) => {
     const res = await fetch(
       `http://localhost:8080/dat3_startcode_security_war_exploded/api/login`,
@@ -23,7 +28,8 @@ function App() {
 
     const data = await res.json();
     console.log(data);
-    setUserName(data);
+    // get username from the data
+    // setUserName(data.userName);
     setLoggedIn(true);
   };
 
@@ -43,8 +49,7 @@ function App() {
       </nav> }
       <Outlet />
       */}
-      {!loggedIn && <LogIn onLogIn={logInFunc} />}
-
+      {!loggedIn && <LogIn onAdd={logInFunc} />}
       <Footer />
     </div>
   );
