@@ -45,6 +45,9 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1>This is our CA2 project</h1>
+      </header>
       <h2>Log in</h2>
       <form onSubmit={onSubmit}>
         <div className="form-control">
