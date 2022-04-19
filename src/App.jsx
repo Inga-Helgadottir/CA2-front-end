@@ -49,7 +49,12 @@ function App() {
       <header className="border">
         <h1>This is our CA 2 project</h1>
       </header>
-      {/* <nav
+      {/* 
+      Uncomment this when we have links 
+      and replace the links here and in main.jsx
+      and add if else that checks if user is logged in
+      if yes show nav else show log in form
+      <nav
         style={{
           borderBottom: "solid 1px",
           paddingBottom: "1rem",
