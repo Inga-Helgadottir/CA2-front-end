@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/App.css";
+import "./styles/form.css";
 
 function App() {
   /*
@@ -46,31 +47,31 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>This is our CA2 project</h1>
+        <h1>This is our CA 2 project</h1>
       </header>
       <h2>Log in</h2>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label>user name</label>
+          <label>User name</label>
           <input
             className="formInput"
             type="text"
-            placeholder="user name"
+            placeholder="User name"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
           ></input>
         </div>
         <div className="form-control">
-          <label>password</label>
+          <label>Password</label>
           <input
             className="formInput"
             type="text"
-            placeholder="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <input type="submit" value="Save Task" className="myButton" />
+        <input type="submit" value="Log in" className="myButton" />
       </form>
     </div>
   );

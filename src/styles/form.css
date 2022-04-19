@@ -1,0 +1,32 @@
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.form-control input {
+  width: 50%;
+  font-size: 15px;
+}
+.form-control label,
+.myButton {
+  font-size: 20px;
+}
+.myButton {
+  background-color: #a00dd1;
+  color: white;
+  padding: 4px 0;
+}
+form input {
+  border: solid 2px black;
+  border-radius: 15px;
+}
+.formInput {
+  padding: 4px 10px;
+}
