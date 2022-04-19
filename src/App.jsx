@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import LogIn from "./components/LogIn";
+import Footer from "./components/Footer";
 import "./styles/App.css";
 import "./styles/form.css";
 
@@ -35,6 +36,7 @@ function App() {
       </nav>
       <Outlet /> */}
       <LogIn onLogIn={logInFunc} />
+      <Footer />
     </div>
   );
 }

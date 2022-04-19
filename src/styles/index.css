@@ -13,7 +13,8 @@ body {
 body {
   --purple-color: #a00dd1;
 }
-header {
+header,
+footer {
   background-color: var(--purple-color);
   padding: 10px 0;
   color: black;
@@ -33,4 +34,15 @@ nav {
 .backLink a {
   font-size: 30px;
   color: greenyellow;
+}
+footer ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+footer ul li {
+  list-style: none;
+  padding: 5px 0;
 }
