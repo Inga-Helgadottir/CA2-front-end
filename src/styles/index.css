@@ -13,12 +13,11 @@ body {
 header {
   background-color: blueviolet;
   padding: 10px 0;
-  border: solid 2px black;
   color: black;
 }
 .App {
-  border-bottom: solid 2px black;
-  padding-bottom: 20px;
+  border-bottom: solid 2px white;
+  padding-bottom: 30px;
 }
 .App h2 {
   font-size: 30px;
