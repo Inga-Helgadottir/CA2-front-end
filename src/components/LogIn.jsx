@@ -7,7 +7,6 @@ const LogIn = ({ logInFunc }) => {
   */
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
