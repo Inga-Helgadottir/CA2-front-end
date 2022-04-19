@@ -5,6 +5,7 @@ import "./styles/App.css";
 import "./styles/form.css";
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import WelcomePage from "./components/WelcomePage";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -51,11 +52,10 @@ function App() {
       <Outlet />
       */}
       {!loggedIn && <LogIn onAdd={logInFunc} />}
-      {loggedIn && (
-        <h2>
-          Hello {userName}, you are an {userRole} on this site
-        </h2>
-      )}
+
+      {/* when we have set the user and role erace this line and uncomment the one below it */}
+      {loggedIn && <WelcomePage name="name" role="role" />}
+      {/* {loggedIn && <WelcomePage name={userName} role={userRole} />} */}
       <Footer />
     </div>
   );
