@@ -10,8 +10,11 @@ body {
   background-color: black;
   color: white;
 }
+body {
+  --test-color: #a00dd1;
+}
 header {
-  background-color: blueviolet;
+  background-color: var(--test-color);
   padding: 10px 0;
   color: black;
 }
