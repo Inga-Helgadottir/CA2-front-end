@@ -8,7 +8,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        {/* all the links should go here*/}
+        {/* all the links should go here and they should look like this
+        <Route path="/showHide" element={<ShowHide />} />
+        */}
       </Route>
       <Route
         // default for when the link is wrong
