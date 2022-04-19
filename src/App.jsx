@@ -32,7 +32,9 @@ function App() {
     // get username and role from the data
     // setUserName(data.userName);
     // setUserRole(data.role);
-    setLoggedIn(true);
+    // if(userName != null && userName != ""){
+    //   setLoggedIn(true);
+    // }
   };
 
   return (
@@ -54,8 +56,9 @@ function App() {
       {!loggedIn && <LogIn onAdd={logInFunc} />}
 
       {/* when we have set the user and role erace this line and uncomment the one below it */}
-      {loggedIn && <WelcomePage name="user name" role="user/admin" />}
+      {loggedIn && <WelcomePage name="user" role="role" />}
       {/* {loggedIn && <WelcomePage name={userName} role={userRole} />} */}
+
       <Footer />
     </div>
   );
