@@ -19,8 +19,8 @@ form {
   font-size: 20px;
 }
 .myButton {
-  /* the test color is set in index.css */
-  background-color: var(--test-color);
+  /* the purple color is set in index.css line 14 */
+  background-color: var(--purple-color);
   color: white;
   padding: 4px 0;
 }

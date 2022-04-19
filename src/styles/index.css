@@ -11,10 +11,10 @@ body {
   color: white;
 }
 body {
-  --test-color: #a00dd1;
+  --purple-color: #a00dd1;
 }
 header {
-  background-color: var(--test-color);
+  background-color: var(--purple-color);
   padding: 10px 0;
   color: black;
 }
