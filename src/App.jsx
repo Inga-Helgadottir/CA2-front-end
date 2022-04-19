@@ -54,7 +54,7 @@ function App() {
       {!loggedIn && <LogIn onAdd={logInFunc} />}
 
       {/* when we have set the user and role erace this line and uncomment the one below it */}
-      {loggedIn && <WelcomePage name="name" role="role" />}
+      {loggedIn && <WelcomePage name="user name" role="user/admin" />}
       {/* {loggedIn && <WelcomePage name={userName} role={userRole} />} */}
       <Footer />
     </div>
