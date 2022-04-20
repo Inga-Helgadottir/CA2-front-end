@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { pokemonUrl } from "../settings";
 
 const Pokemons = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -13,15 +14,12 @@ const Pokemons = () => {
   }, []);
 
   const fetchPokemons = async () => {
-    const res = await fetch(
-      `http://localhost:8080/dat3_startcode_security_war_exploded/api/info/pokemon`,
-      {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
-    );
+    const res = await fetch(pokemonUrl, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
 
     const data = await res.json();
     return data;

@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage";
 import LogOut from "./components/LogOut";
+import { loginUrl } from "./settings";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -14,16 +15,13 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const logInFunc = async (user) => {
-    const res = await fetch(
-      `http://localhost:8080/dat3_startcode_security_war_exploded/api/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    );
+    const res = await fetch(loginUrl, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
 
     const data = await res.json();
     setUserName(data.username);

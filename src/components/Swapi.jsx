@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { swapiUrl } from "../settings";
 
 const Swapi = () => {
   const [luke, setLuke] = useState([]);
@@ -13,15 +14,12 @@ const Swapi = () => {
   }, []);
 
   const fetchSwapi = async () => {
-    const res = await fetch(
-      `http://localhost:8080/dat3_startcode_security_war_exploded/api/info/swapi`,
-      {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
-    );
+    const res = await fetch(swapiUrl, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
 
     const data = await res.json();
     return data;
