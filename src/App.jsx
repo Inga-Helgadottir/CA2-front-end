@@ -6,6 +6,7 @@ import "./styles/form.css";
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage";
+import LogOut from "./components/LogOut";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -36,6 +37,15 @@ function App() {
     //   setLoggedIn(true);
     // }
   };
+  /*
+  logInFunc DOES NOT WORK YET 
+  */
+  const logOutFunc = async () => {
+    setLoggedIn(false);
+    setUserName("");
+    setUserRole("");
+  };
+
   return (
     <div className="App">
       <Header />
@@ -49,6 +59,9 @@ function App() {
       <Outlet />
 
       {!loggedIn && <LogIn onAdd={logInFunc} />}
+
+      {/* find out how to log out and add to LogOut */}
+      {loggedIn && <LogOut />}
 
       {/* when we have set the user and role erace this line and uncomment the one below it */}
       {loggedIn && <WelcomePage name="user" role="role" />}

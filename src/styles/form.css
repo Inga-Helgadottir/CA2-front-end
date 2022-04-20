@@ -15,16 +15,17 @@ form {
   font-size: 15px;
 }
 .form-control label,
-.myButton {
+.myButton,
+.logOut {
   font-size: 20px;
 }
 .myButton {
-  /* the purple color is set in index.css line 14 */
-  background-color: var(--purple-color);
-  color: white;
+  background-color: #17fc03;
+  color: black;
   padding: 4px 0;
 }
-form input {
+form input,
+.logOut {
   border: solid 2px white;
   border-radius: 15px;
 }
@@ -39,4 +40,12 @@ form input {
   border-left: solid 2px white;
   border-bottom: solid 2px white;
   padding: 5px 0 25px 0;
+}
+.logOut {
+  width: 90%;
+  margin-top: 15px;
+  background-color: #fc0318;
+  border: solid 2px white;
+  color: white;
+  padding: 5px;
 }
