@@ -13,9 +13,6 @@ function App() {
   const [userRole, setUserRole] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
-  /*
-  logInFunc DOES NOT WORK YET 
-  */
   const logInFunc = async (user) => {
     const res = await fetch(
       `http://localhost:8080/dat3_startcode_security_war_exploded/api/login`,
@@ -29,17 +26,13 @@ function App() {
     );
 
     const data = await res.json();
-    console.log(data);
-    // get username and role from the data
-    // setUserName(data.userName);
-    // setUserRole(data.role);
-    // if(userName != null && userName != ""){
-    //   setLoggedIn(true);
-    // }
+    setUserName(data.username);
+    setUserRole(data.role0);
+    if (data.username != null && data.username != "") {
+      setLoggedIn(true);
+    }
   };
-  /*
-  logInFunc DOES NOT WORK YET 
-  */
+
   const logOutFunc = async () => {
     setLoggedIn(false);
     setUserName("");
@@ -50,6 +43,8 @@ function App() {
     <div className="App">
       <Header />
 
+      {loggedIn && <WelcomePage name={userName} role={userRole} />}
+
       {loggedIn && (
         <nav className="borderNoTop">
           <Link to="/">Home</Link>
@@ -59,14 +54,9 @@ function App() {
       )}
       <Outlet />
 
-      {/* find out how to log out and add to LogOut */}
-      {loggedIn && <LogOut />}
-
       {!loggedIn && <LogIn onAdd={logInFunc} />}
 
-      {/* when we have set the user and role erace this line and uncomment the one below it */}
-      {loggedIn && <WelcomePage name="user" role="role" />}
-      {/* {loggedIn && <WelcomePage name={userName} role={userRole} />} */}
+      {loggedIn && <LogOut onClick={logOutFunc} />}
 
       <Footer />
     </div>

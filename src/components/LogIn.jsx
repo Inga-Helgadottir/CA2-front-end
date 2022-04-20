@@ -5,12 +5,12 @@ const LogIn = ({ onAdd }) => {
   /*
   THIS CODE DOES NOT WORK YET 
   */
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (!userName) {
+    if (!username) {
       alert("Please add a task");
       return;
     }
@@ -19,7 +19,7 @@ const LogIn = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ userName, password });
+    onAdd({ username, password });
 
     setUserName("");
     setPassword("");
@@ -35,7 +35,7 @@ const LogIn = ({ onAdd }) => {
             className="formInput"
             type="text"
             placeholder="User name"
-            value={userName}
+            value={username}
             onChange={(e) => setUserName(e.target.value)}
           ></input>
         </div>
