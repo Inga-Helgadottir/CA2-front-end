@@ -30,12 +30,12 @@ const Pokemons = () => {
   return (
     <div className="border">
       {pokemons.map((pokemon, index) => {
-        console.log("name: " + pokemon.name);
-        console.log("url: " + pokemon.url);
-        <div key={index}>
-          <h2>Pokemon name: {pokemon.name}</h2>
-          <p>Pokemon url: {pokemon.url}</p>
-        </div>;
+        return (
+          <div key={index}>
+            <h2>Pokemon name: {pokemon.name}</h2>
+            <p>Pokemon url: {pokemon.url}</p>
+          </div>
+        );
       })}
     </div>
   );

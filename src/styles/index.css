@@ -51,6 +51,8 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: #440459;
+  padding-top: 25px !important;
 }
 nav a {
   text-decoration: none;
@@ -59,5 +61,6 @@ nav a {
   padding: 10px;
 }
 nav a:hover {
+  text-decoration: underline;
   color: aqua;
 }

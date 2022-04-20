@@ -39,9 +39,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* remember to change the line below from !loggedIn to loggedIn */}
       {!loggedIn && (
         <nav className="borderNoTop">
+          <Link to="/">Home</Link>
           <Link to="/pokemons">Pokemons</Link>
           <Link to="/swapi">Star wars</Link>
         </nav>
