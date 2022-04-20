@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const LogIn = ({ onAdd }) => {
-  /*
-  THIS CODE DOES NOT WORK YET 
-  */
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
