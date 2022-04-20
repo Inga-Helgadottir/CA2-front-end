@@ -29,14 +29,16 @@ const Pokemons = () => {
 
   return (
     <div className="border">
-      {pokemons.map((pokemon, index) => {
-        return (
-          <div key={index}>
-            <h2>Pokemon name: {pokemon.name}</h2>
-            <p>Pokemon url: {pokemon.url}</p>
-          </div>
-        );
-      })}
+      {pokemons != null &&
+        pokemons.map((pokemon, index) => {
+          return (
+            <div key={index}>
+              <h2>Pokemon name: {pokemon.name}</h2>
+              <p>Pokemon url: {pokemon.url}</p>
+            </div>
+          );
+        })}
+      {pokemons == null && <h2>There are no pokemons</h2>}
     </div>
   );
 };
