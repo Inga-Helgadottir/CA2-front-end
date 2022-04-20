@@ -11,11 +11,11 @@ const LogIn = ({ onAdd }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!username) {
-      alert("Please add a task");
+      alert("Please enter a user name");
       return;
     }
     if (!password) {
-      alert("Please add a pokemon");
+      alert("Please enter a password");
       return;
     }
 
