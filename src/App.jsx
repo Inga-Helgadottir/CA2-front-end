@@ -49,7 +49,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {!loggedIn && (
+
+      {loggedIn && (
         <nav className="borderNoTop">
           <Link to="/">Home</Link>
           <Link to="/pokemons">Pokemons</Link>
@@ -58,10 +59,10 @@ function App() {
       )}
       <Outlet />
 
-      {!loggedIn && <LogIn onAdd={logInFunc} />}
-
       {/* find out how to log out and add to LogOut */}
       {loggedIn && <LogOut />}
+
+      {!loggedIn && <LogIn onAdd={logInFunc} />}
 
       {/* when we have set the user and role erace this line and uncomment the one below it */}
       {loggedIn && <WelcomePage name="user" role="role" />}
