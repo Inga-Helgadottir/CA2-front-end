@@ -3,14 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Pokemons from "./components/Pokemons";
+import Swapi from "./components/Swapi";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        {/* all the links should go here and they should look like this
-        <Route path="/showHide" element={<ShowHide />} />
-        */}
+        <Route path="/pokemons" element={<Pokemons />} />
+        <Route path="/swapi" element={<Swapi />} />
       </Route>
       <Route
         // default for when the link is wrong

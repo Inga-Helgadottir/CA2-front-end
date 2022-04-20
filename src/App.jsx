@@ -36,23 +36,20 @@ function App() {
     //   setLoggedIn(true);
     // }
   };
-
   return (
     <div className="App">
       <Header />
-      {/* 
-      Uncomment this when we have links 
-      and replace the links here and in main.jsx
-      {loggedIn &&
-      <nav>
-      {/*the following has to match the ones in main.jsx
-      in main.jsx
-      <Route path="/showHide" element={<ShowHide />} />
-      in App.jsx
-      <Link to="/showHide">Show hide</Link>|
-      </nav> }
+
+      {/* Uncomment this when we have links 
+      and replace the links here and in main.jsx */}
+      {!loggedIn && (
+        <nav className="borderNoTop">
+          <Link to="/pokemons">Pokemons</Link>
+          <Link to="/swapi">Star wars</Link>
+        </nav>
+      )}
       <Outlet />
-      */}
+
       {!loggedIn && <LogIn onAdd={logInFunc} />}
 
       {/* when we have set the user and role erace this line and uncomment the one below it */}
