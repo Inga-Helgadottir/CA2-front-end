@@ -39,9 +39,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
-      {/* Uncomment this when we have links 
-      and replace the links here and in main.jsx */}
+      {/* remember to change the line below from !loggedIn to loggedIn */}
       {!loggedIn && (
         <nav className="borderNoTop">
           <Link to="/pokemons">Pokemons</Link>

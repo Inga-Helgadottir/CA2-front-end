@@ -26,6 +26,7 @@ const Pokemons = () => {
     const data = await res.json();
     return data;
   };
+
   return (
     <div className="border">
       {pokemons.map((pokemon, index) => {
